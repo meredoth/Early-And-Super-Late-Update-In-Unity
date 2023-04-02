@@ -5,11 +5,6 @@ namespace Examples
 {
 public class NonMonobehaviour : IEarlyUpdate, ISuperLateUpdate
 {
-   public NonMonobehaviour()
-   {
-      UpdateManager.RegisterEarlyUpdate(this);
-      UpdateManager.RegisterSuperLateUpdate(this);
-   }
    void IEarlyUpdate.EarlyUpdate()
    {
       Debug.Log("Inside NonMonoBehaviour Early Update");

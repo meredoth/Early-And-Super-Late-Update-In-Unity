@@ -68,8 +68,6 @@ public static class UpdateManager
    
    private static void OnEarlyUpdate()
    {
-      if (!Application.isPlaying) return; // useful for non-MonoBehaviours because the game loop is running even when not in play mode
-      
       using var e = _earlyUpdates.GetEnumerator();
       while (e.MoveNext())
       {
@@ -79,8 +77,6 @@ public static class UpdateManager
 
    private static void OnSuperLateUpdate()
    {
-      if (!Application.isPlaying) return; // useful for non-MonoBehaviours because the game loop is running even when not in play mode
-      
       using var e = _superLateUpdates.GetEnumerator();
       while (e.MoveNext())
       {
