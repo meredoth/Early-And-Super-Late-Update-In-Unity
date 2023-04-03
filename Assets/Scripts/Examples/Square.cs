@@ -23,6 +23,7 @@ public class Square : MonoBehaviour, IEarlyUpdate
     void IEarlyUpdate.EarlyUpdate()
     {
         Debug.Log("Inside Square Early Update");
+        transform.Rotate(Vector3.forward, 60f * Time.deltaTime);
     }
 }
 }
